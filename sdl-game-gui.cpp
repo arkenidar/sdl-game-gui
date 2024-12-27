@@ -1,6 +1,24 @@
 // https://claude.ai/chat/c9101bf5-9807-4f12-be2b-b2d186596edc
-// g++ -o sdl-game-gui sdl-game-gui.cpp -lSDL2 -lSDL2_ttf && ./sdl-game-gui
 
+// SDL2 Game GUI with buttons and text rendering
+
+// Requirements : compilation requires SDL2 and SDL2_ttf development libraries .
+
+// On Windows with MSYS2 + MinGW64: pacman -S mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_ttf --needed
+// On Debian/Ubuntu: sudo apt install libsdl2-dev libsdl2-ttf-dev
+// On Fedora: sudo dnf install SDL2-devel SDL2_ttf-devel
+// On Arch Linux: sudo pacman -S sdl2 sdl2_ttf
+// On macOS: brew install sdl2 sdl2_ttf
+
+// This C++ code compiles with GNU g++ and requires the SDL2 and SDL2_ttf libraries :
+// g++ -o sdl-game-gui sdl-game-gui.cpp $(pkg-config --cflags --libs SDL2_ttf)
+
+// Tested on GNU g++ :
+// g++ compiles in Debian 12 GNU / Linux .
+// g++ compiles in Windows 11 using MSYS2 + MinGW64 .
+// Not tested yet on Ubuntu, Fedora, Arch Linux, macOS, but should work quite similarly .
+
+// The code is a simple SDL2 game GUI with buttons and text rendering.
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 #include <iostream>
